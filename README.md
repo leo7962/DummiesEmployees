@@ -24,7 +24,7 @@ This project is an MVC application that demonstrates good design practices and c
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repository.git
+git clone https://github.com/leo7962/DummiesEmployees.git
 cd your-repository
 ```
 
