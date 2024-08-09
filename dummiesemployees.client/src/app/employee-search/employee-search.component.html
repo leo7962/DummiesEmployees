@@ -1,0 +1,41 @@
+<div class="container">
+  <!-- Error Message -->
+  <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Search Form -->
+  <div class="row mb-3">
+    <div class="col-md-8">
+      <div class="form-group">
+        <label for="employeeId">Employee ID</label>
+        <input type="number" id="employeeId" class="form-control" [(ngModel)]="employeeId" placeholder="Enter Employee ID" />
+      </div>
+    </div>
+    <div class="col-md-4 d-flex align-items-end">
+      <button class="btn btn-primary btn-block" (click)="searchEmployee()">Search</button>
+    </div>
+  </div>
+
+  <!-- Employee Table -->
+  <div *ngIf="!errorMessage">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Annual Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.employee_name }}</td>
+          <td>{{ employee.employee_salary | currency }}</td>
+          <td>{{ (employee.employee_salary * 12) | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

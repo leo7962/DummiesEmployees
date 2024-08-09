@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.875rem; /* Smaller text on smaller screens */
+  }
+
+  .form-control {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn {
+    width: 100%; /* Full-width buttons on very small screens */
+  }
+}
